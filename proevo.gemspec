@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.email = %q{jamie@projectevolution.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
+    "README.mkdn",
     "README.rdoc"
   ]
   s.files = [
@@ -21,9 +22,20 @@ Gem::Specification.new do |s|
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
+    "README.mkdn",
     "README.rdoc",
     "Rakefile",
     "lib/proevo.rb",
+    "proevo.gemspec",
+    "stylesheets/_proevo.scss",
+    "stylesheets/proevo/_base.scss",
+    "stylesheets/proevo/_forms.scss",
+    "stylesheets/proevo/_layout.scss",
+    "templates/project/js/jquery-1.5.1.min.js",
+    "templates/project/js/jquery-ui-1.8.6.custom.min.js",
+    "templates/project/js/modernizr-1.7.min.js",
+    "templates/project/js/script.js",
+    "templates/project/manifest.rb",
     "test/helper.rb",
     "test/test_proevo.rb"
   ]
