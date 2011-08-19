@@ -23,7 +23,6 @@ Jeweler::Tasks.new do |gem|
   gem.authors = ["Jamie"]
   # dependencies defined in Gemfile
 end
-
 Jeweler::RubygemsDotOrgTasks.new
 
 require 'rake/testtask'
