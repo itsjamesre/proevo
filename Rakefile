@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "proevo"
   gem.homepage = "http://github.com/itsjamesre/proevo"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Styles and layout for Project Evolution}
+  gem.description = %Q{Styles and layout for Project Evolution}
   gem.email = "jamie@projectevolution.com"
   gem.authors = ["Jamie"]
   # dependencies defined in Gemfile
