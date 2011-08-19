@@ -13,6 +13,7 @@ require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
+	version = File.exist?('VERSION') ? File.read('VERSION') : ""
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "proevo"
   gem.homepage = "http://github.com/itsjamesre/proevo"
@@ -21,6 +22,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Styles and layout for Project Evolution}
   gem.email = "jamie@projectevolution.com"
   gem.authors = ["Jamie"]
+  gem.version = version
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
