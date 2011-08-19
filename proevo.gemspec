@@ -28,7 +28,6 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/proevo.rb",
     "proevo-0.0.0.gem",
-    "proevo-0.2.0.gem",
     "proevo.gemspec",
     "stylesheets/_proevo.scss",
     "stylesheets/proevo/_base.scss",
