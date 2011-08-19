@@ -56,3 +56,13 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('stylesheets/**/*.*')
   rdoc.rdoc_files.include('templates/**/*.*')
 end
+
+begin  
+  require 'jeweler'  
+  Jeweler::Tasks.new do |gemspec|  
+    # Attributes omitted.  
+  end  
+  Jeweler::GemcutterTasks.new  
+rescue LoadError  
+  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"  
+end  
