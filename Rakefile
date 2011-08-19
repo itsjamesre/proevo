@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 require 'rubygems'
+require 'sass'
+require 'compass'
 require 'bundler'
 begin
   Bundler.setup(:default, :development)
