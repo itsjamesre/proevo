@@ -19,7 +19,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/itsjamesre/proevo"
   gem.license = "MIT"
   gem.summary = %Q{Styles and layout for Project Evolution}
-  gem.description = %Q{Styles and layout for Project Evolution}
+  gem.description = %Q{Styles and layout for Project Evolution. Developed in compass.}
   gem.email = "jamie@projectevolution.com"
   gem.authors = ["Jamie"]
   gem.version = version
