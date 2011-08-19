@@ -23,6 +23,7 @@ Jeweler::Tasks.new do |gem|
   gem.authors = ["Jamie"]
   # dependencies defined in Gemfile
 end
+
 Jeweler::RubygemsDotOrgTasks.new
 
 require 'rake/testtask'
@@ -50,4 +51,6 @@ Rake::RDocTask.new do |rdoc|
   rdoc.title = "proevo #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
+  rdoc.rdoc_files.include('stylesheets/**/*.*')
+  rdoc.rdoc_files.include('templates/**/*.*')
 end

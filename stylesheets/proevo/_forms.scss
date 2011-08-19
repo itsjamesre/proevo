@@ -1,0 +1,17 @@
+// Base form styles for inputs textareas etc
+
+@mixin input_base {
+	background: url(../img/input-bg.png) 0 0 repeat-x #fff;
+	border: 1px solid #c3c3c3;
+	@include border-radius;
+	@include box-shadow(rgba(250,250,250,0.75) 0 0 5px, #ccc 0 0 5px inset);
+	color: #999;
+	font-family: $default-font;
+	font-size: 1.1em;
+	height: 32px;
+	line-height: 32px;
+	min-width: 38px;
+	padding: 0 10px;
+	text-align: left;
+	vertical-align: top;
+}

@@ -1,0 +1,49 @@
+// Basic Styles, COlors and Imports
+
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/font-face";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/inline-block";
+@import "compass/support";
+
+$default-color: #444;
+$default-color-lite: $default-color + #555;
+
+$primary-color: #019F48;
+$primary-color-neon: #00D761;
+$primary-color-dark: #006D33;
+$primary-color-muted: #74AB8E;
+$primary-color-lite: #DDEDE4;
+
+@mixin ul_base {
+	@include clearfix;
+	list-style-type:none;
+	
+	li {
+		border-right:solid 1px #bbb;
+		display:block;
+		float:left;
+		line-height:1em;
+		padding:2px 15px;
+		
+		a {
+			color:#666;
+			text-decoration:none;
+		}
+		
+		a:hover {
+			color:#111;
+		}
+	}
+	
+	li:first-child {
+		padding-left:2px;
+	}
+	
+	li:last-child {
+		border:none;
+		padding-right:2px;
+	}
+}
+
