@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Jamie}]
   s.date = %q{2011-08-19}
-  s.description = %q{Styles and layout for Project Evolution}
+  s.description = %q{Styles and layout for Project Evolution. Developed in compass.}
   s.email = %q{jamie@projectevolution.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
