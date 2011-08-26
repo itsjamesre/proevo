@@ -9,14 +9,14 @@
 
 // Text default colors
 $default-color: #222;
-$default-color-lite: #444;
+$default-color-lite: #777;
 
 // Layout default colors
-$primary-color: #019F48;
-$primary-color-neon: #00D761;
-$primary-color-dark: #006D33;
-$primary-color-muted: #74AB8E;
-$primary-color-lite: #DDEDE4;
+$primary-color: #eee;
+$primary-color-neon: #fff;
+$primary-color-dark: #222;
+$primary-color-muted: #ccc;
+$primary-color-lite: #eee;
 
 @mixin ul_base {
 	ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
@@ -45,11 +45,21 @@ $primary-color-lite: #DDEDE4;
 
 	b, strong { font-weight: bold; }
 	
-	blockquote { margin: 1em 40px; }
+	big { font-weight: bold; font-size: 115%; }
 	
-	dfn { font-style: italic; }
+	blockquote { margin: 1em 40px;  }
 	
-	hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+	cite { font-size: .85em; margin: 1em 40px; }
+	
+	code, samp, kbd, var { margin: 1em 40px; background-color: $primary-color-lite; }
+	
+	del { background: $primary-color-muted; color: $default-color-lite; text-decoration: none;  }
+	
+	details, summary { display: none; }
+	
+	dfn, tt, i { font-style: italic; }
+	
+	hr { display: block; height: 1px; border: 0; border-top: 1px solid $primary-color-muted; margin: 1em 0; padding: 0; }
 	
 	ins { background: $primary-color; color: $default-color; text-decoration: none; }
 	
@@ -63,6 +73,8 @@ $primary-color-lite: #DDEDE4;
 	
 	q { quotes: none; }
 	q:before, q:after { content: ""; content: none; }
+	
+	s, strike { text-decoration: line-through; color: $primary-color-lite; }
 	
 	small { font-size: 85%; }
 	
@@ -79,11 +91,11 @@ $primary-color-lite: #DDEDE4;
 
 @mixin html5_base {
 	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-	audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+	audio, canvas, video,command, mark, meter, time { display: inline-block; *display: inline; *zoom: 1; }
 	audio:not([controls]) { display: none; }
 	[hidden] { display: none; }
-	::-moz-selection { background: $primary-color-lite; color: #fff; text-shadow: none; }
-	::selection { background: $primary-color-lite; color: #fff; text-shadow: none; }
+	::-moz-selection { background: $primary-color-lite; color: $primary-color-neon; text-shadow: none; }
+	::selection { background: $primary-color-lite; color: $primary-color-neon; text-shadow: none; }
 	figure { margin: 0; }
 }
 
@@ -92,7 +104,8 @@ $primary-color-lite: #DDEDE4;
 		margin: 0;
 		fieldset { border: 0; margin: 0; padding: 0; }
 		legend { border: 0; *margin-left: -7px; padding: 0; }
-		button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+		label { font-weight: bold; color: $primary-color; border-bottom: dotted 1px $primary-color-muted; }
+		button, input, select, textarea, keygen, output { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
 		button, input { line-height: normal; *overflow: visible; }
 		table button, table input { *overflow: auto; }
 		button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
@@ -103,6 +116,7 @@ $primary-color-lite: #DDEDE4;
 		textarea { overflow: auto; vertical-align: top; resize: vertical; }
 		input:valid, textarea:valid {  }
 		input:invalid, textarea:invalid { background-color: $primary-color-lite; }
+		datalist { margin: 1em 0; padding: 0 0 0 40px; }
 	}
 }
 
@@ -111,8 +125,9 @@ $primary-color-lite: #DDEDE4;
 		margin: 0;
 		padding: 0;
 		border-collapse: collapse; 
-		border-spacing: 0; 
-		td, tr { 
+		border-spacing: 0;
+		caption { font-weight: bold; }
+		td, tr, th { 
 			margin: 0;
 			padding: 0;
 			vertical-align: top; 
