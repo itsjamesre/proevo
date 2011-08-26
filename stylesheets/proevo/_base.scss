@@ -7,9 +7,11 @@
 @import "compass/css3/inline-block";
 @import "compass/support";
 
-$default-color: #444;
-$default-color-lite: $default-color + #555;
+// Text default colors
+$default-color: #222;
+$default-color-lite: #444;
 
+// Layout default colors
 $primary-color: #019F48;
 $primary-color-neon: #00D761;
 $primary-color-dark: #006D33;
@@ -17,33 +19,113 @@ $primary-color-muted: #74AB8E;
 $primary-color-lite: #DDEDE4;
 
 @mixin ul_base {
-	@include clearfix;
-	list-style-type:none;
+	ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+	dd { margin: 0 0 0 40px; }
+	nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+}
+
+@mixin a_base {
+	a { color: $default-color; }
+	a:visited { color: $default-color-lite; }
+	a:hover { color: $default-color-lite; }
+	a:focus { outline: thin dotted; }
 	
-	li {
-		border-right:solid 1px #bbb;
-		display:block;
-		float:left;
-		line-height:1em;
-		padding:2px 15px;
-		
-		a {
-			color:#666;
-			text-decoration:none;
-		}
-		
-		a:hover {
-			color:#111;
-		}
-	}
+	/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+	a:hover, a:active { outline: 0; }
+}
+
+@mixin typo_base {
+	font-size: 13px; 
+	line-height: 1.231; 
+	font-family: sans-serif; 
+	color: $default-color;
+
+	button, input, select, textarea { font-family: sans-serif; color: $default-color; }
+	abbr[title] { border-bottom: 1px dotted; }
+
+	b, strong { font-weight: bold; }
 	
-	li:first-child {
-		padding-left:2px;
-	}
+	blockquote { margin: 1em 40px; }
 	
-	li:last-child {
-		border:none;
-		padding-right:2px;
+	dfn { font-style: italic; }
+	
+	hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+	
+	ins { background: $primary-color; color: $default-color; text-decoration: none; }
+	
+	mark { background: $primary-color; color: $default-color; font-style: italic; font-weight: bold; }
+	
+	/* Redeclare monospace font family: h5bp.com/j */
+	pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+	
+	/* Improve readability of pre-formatted text in all browsers */
+	pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+	
+	q { quotes: none; }
+	q:before, q:after { content: ""; content: none; }
+	
+	small { font-size: 85%; }
+	
+	/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+	sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+	sup { top: -0.5em; }
+	sub { bottom: -0.25em; }
+}
+
+@mixin img_base {
+	img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; display: block; }
+	svg:not(:root) { overflow: hidden; }
+}
+
+@mixin html5_base {
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+	audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+	audio:not([controls]) { display: none; }
+	[hidden] { display: none; }
+	::-moz-selection { background: $primary-color-lite; color: #fff; text-shadow: none; }
+	::selection { background: $primary-color-lite; color: #fff; text-shadow: none; }
+	figure { margin: 0; }
+}
+
+@mixin form_base {
+	form {
+		margin: 0;
+		fieldset { border: 0; margin: 0; padding: 0; }
+		legend { border: 0; *margin-left: -7px; padding: 0; }
+		button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+		button, input { line-height: normal; *overflow: visible; }
+		table button, table input { *overflow: auto; }
+		button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+		input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+		input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+		input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+		button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+		textarea { overflow: auto; vertical-align: top; resize: vertical; }
+		input:valid, textarea:valid {  }
+		input:invalid, textarea:invalid { background-color: $primary-color-lite; }
 	}
 }
 
+@mixin table_base {
+	table {
+		margin: 0;
+		padding: 0;
+		border-collapse: collapse; 
+		border-spacing: 0; 
+		td, tr { 
+			margin: 0;
+			padding: 0;
+			vertical-align: top; 
+		}
+	}
+}
+
+html { 
+	font-size: 100%; 
+	overflow-y: scroll; 
+	-webkit-text-size-adjust: 100%; 
+	-ms-text-size-adjust: 100%; 
+	body { 
+		
+	}
+}
