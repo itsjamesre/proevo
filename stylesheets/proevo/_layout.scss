@@ -13,8 +13,56 @@ body {
   // Or leave it in if you're happy with how blueprint looks out-of-the-box
 }
 
+// Basic four column layout for default
+
 $blueprint-grid-columns: 4;
 $blueprint-grid-width: 225px;
 $blueprint-grid-margin: 30px;
 $blueprint-grid-outer-width: $blueprint-grid-width + $blueprint-grid-margin;
 $blueprint-container-size: $blueprint-grid-outer-width * $blueprint-grid-columns - $blueprint-grid-margin;
+
+body {
+	div, header, footer, section { min-height: 100px; } // Temp height so we can see what is going on.
+	.site-container {
+		width: 100%;
+		header, footer {
+			width: 100%;
+			nav {
+				$blueprint-container-size;
+				margin: 0 auto;
+				ul {
+					list-style-type: none;
+					li {
+						float: right;
+						padding: 3px 5px;
+						margin: 0px 5px;
+						border-left: 1px solid $primary-color-dark;
+						border-right: 1px solid $primary-color-dark;
+					}
+				}
+			}
+		}
+		section {
+			width: $blueprint-container-size;
+			margin: 0 auto;
+			padding: 0;
+			aside {
+				@include column(1);
+			}
+			.content {
+				@include column(3, $last: true);				
+			}
+			&.home {
+				.content { width: $blueprint-container-size; }
+				section {
+					.mission {
+						@include column(2);
+					}
+					.news {
+						@include column(2, $last: true);
+					}
+				}
+			}
+		}
+	}
+}
